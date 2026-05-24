@@ -30,7 +30,7 @@ export default function Hero() {
     {
       name: "Github",
       href: "https://github.com/Msayeem",
-      icon: "https://e7.pngegg.com/pngimages/646/324/png-clipart-github-computer-icons-github-logo-monochrome-thumbnail.png",
+      icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     },
     {
       name: "LinkedIn",
