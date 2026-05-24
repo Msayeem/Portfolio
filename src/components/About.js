@@ -106,7 +106,7 @@ export default function About() {
             <Link
   className="flex items-center justify-center gap-2 bg-white hover:bg-gray-200 text-black px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
   href="mailto:msayeem223@gmail.com?subject=Opportunity%20Inquiry%20-%20Full%20Stack%20Developer"
-  target="_blank"
+  // Removed target="_blank" from here so it doesn't open a dead blank page
 >
   <svg
     className="h-5 w-5"
