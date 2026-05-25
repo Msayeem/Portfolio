@@ -137,7 +137,7 @@ export default function About() {
             {/* Resume Button */}
             <Link
               className="flex items-center justify-center gap-2 bg-white hover:bg-gray-200 text-black px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/13AlZGiG2AZeDG0GGcoDYEdiOqlYuhNRs/view"
               target="_blank"
               rel="noopener noreferrer"
             >
