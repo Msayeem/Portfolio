@@ -72,7 +72,7 @@ export default function About() {
               <div className="relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] lg:w-[320px] lg:h-[320px] rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl">
                 <Image
                   alt="Angel Garcia Profile Picture"
-                  src="/sayem.jpg" // Change this safely to your local image inside your public/ directory
+                  src="/sayem2.png" // Change this safely to your local image inside your public/ directory
                   fill
                   priority
                   className="object-cover"

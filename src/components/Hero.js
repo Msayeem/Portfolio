@@ -83,7 +83,7 @@ export default function Hero() {
           <Image
             alt="Sayem Profile"
             className="w-full h-full rounded-full object-cover"
-            src="/sayem.jpg"
+            src="/sayem2.png"
             width={160}
             height={160}
             priority
