@@ -2,6 +2,7 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import PageTransition from "@/components/PageTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
        <SmoothScroll>
-         {children}
+         <PageTransition>
+          {children}
+         </PageTransition>
        </SmoothScroll>
         </body>
     </html>
