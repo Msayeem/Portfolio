@@ -1,6 +1,7 @@
 // app/layout.js
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,7 +17,11 @@ export default function RootLayout({ children }) {
   return (
     // CRUCIAL: Both variables must be included with a space separating them
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body>{children}</body>
+      <body>
+       <SmoothScroll>
+         {children}
+       </SmoothScroll>
+        </body>
     </html>
   );
 }
