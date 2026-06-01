@@ -1,8 +1,40 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// 1. Register the plugin safely outside the component lifecycle
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
+  const sectionRef = useRef(null);
+
+  useGSAP(() => {
+    // Using fromTo allows us to set the start state via JS safely without breaking on SSR
+    gsap.fromTo(".project-card", 
+      {
+        y: 40,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.12, // Cascades the entrance of each card nicely
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".project-grid", // Targets the parent grid element
+          start: "top 85%",        // Triggers when the top of the grid hits 85% of viewport height
+          toggleActions: "play none none reverse",
+        }
+      }
+    );
+  }, { scope: sectionRef, dependencies: [] }); // 👈 Added empty dependency array for stable client hydration
+
   const projects = [
     {
       title: "Sport-Nest",
@@ -39,7 +71,7 @@ export default function Projects() {
         "A personal connection tracker for staying in touch with the people that matter.",
       image: "/keenkeeper.png",
       tags: [
-          { label: "Next.js", bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/20", dot: "bg-emerald-400" },
+        { label: "Next.js", bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/20", dot: "bg-emerald-400" },
         { label: "React", bg: "bg-cyan-500/10", text: "text-cyan-400", border: "border-cyan-500/20", dot: "bg-cyan-400" },
         { label: "Tailwind CSS", bg: "bg-sky-500/10", text: "text-sky-400", border: "border-sky-500/20", dot: "bg-sky-400" },
       ],
@@ -61,19 +93,18 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-20 max-w-[1200px] mx-auto px-gutter" id="projects">
+    <section ref={sectionRef} className="py-20 max-w-[1200px] mx-auto px-gutter" id="projects">
       <div className="flex items-center gap-3 mb-12">
-        <span className="material-symbols-outlined text-headline-lg text-primary">
-          
-        </span>
+        <span className="material-symbols-outlined text-headline-lg text-primary"></span>
         <h2 className="font-headline-lg text-headline-lg text-white">Projects</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="glass-card rounded-xl overflow-hidden group border border-white/5 bg-white/[0.02] backdrop-blur-md"
+            // Removed static opacity-0 class here
+            className="project-card glass-card rounded-xl overflow-hidden group border border-white/5 bg-white/[0.02] backdrop-blur-md"
           >
             {/* Project Image Wrapper */}
             <div className="h-48 overflow-hidden relative">
@@ -90,7 +121,7 @@ export default function Projects() {
             <div className="p-6">
               <h4 className="font-headline-md text-headline-md mb-3 text-white font-semibold">
                 {project.title}
-              </h4>
+              </h4> 
 
               {/* Cleaned Tech Badges */}
               <div className="flex flex-wrap gap-2 mb-4">

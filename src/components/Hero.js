@@ -1,24 +1,56 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState } from "react";
 import Image from "next/image";
 import { IoMailOutline, IoCopyOutline, IoCheckmarkCircleOutline } from "react-icons/io5";
 
+// Register ScrollTrigger for the background parallax
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Hero() {
+  const container = useRef(null);
   const [showEmailCard, setShowEmailCard] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      const hero = document.getElementById("home");
-      if (hero) {
-        hero.style.backgroundPositionY = -(scrolled * 0.1) + "px";
+  useGSAP(() => {
+    // 1. Entrance Animations Timeline
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+    
+    tl.from(".animate-profile", {
+      scale: 0.8,
+      opacity: 0,
+      duration: 1.2,
+      delay: 0.2
+    })
+    .from(".animate-text", {
+      y: 40,
+      opacity: 0,
+      duration: 1,
+    }, "-=0.8") // Starts 0.8s before the profile animation finishes
+    .from(".animate-actions", {
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1
+    }, "-=0.6");
+
+    // 2. Performance-Optimized Background Parallax
+    gsap.to("#home", {
+      backgroundPositionY: "100px", // Adjust value to change intensity
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#home",
+        start: "top top",
+        end: "bottom top",
+        scrub: true // Syncs animation precisely with the scrollbar scroll position
       }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    });
+
+  }, { scope: container });
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("msayeem223@gmail.com");
@@ -41,10 +73,12 @@ export default function Hero() {
 
   return (
     <section
+      ref={container}
       className="pt-32 pb-20 radial-gradient-bg min-h-screen flex flex-col items-center justify-center text-center px-gutter relative"
       id="home"
     >
-      <div className="relative mb-8">
+      {/* Profile Image Wrapper */}
+      <div className="animate-profile relative mb-8 opacity-100">
         <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/20 p-1 relative mx-auto">
           <Image
             alt="Sayem Profile"
@@ -57,13 +91,14 @@ export default function Hero() {
         </div>
       </div>
       
-      <h1 className="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl max-w-4xl mb-8 leading-tight">
+      {/* Main Headline Heading */}
+      <h1 className="animate-text font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl max-w-4xl mb-8 leading-tight opacity-100">
         Building <span className="text-primary">modern web applications</span>{" "}
         with a focus on aesthetics, functionality and accessibility.
       </h1>
 
       <div className="flex flex-col items-center gap-4 relative z-10 w-full max-w-md">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto px-4 sm:px-0">
+        <div className="animate-actions flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto px-4 sm:px-0 opacity-100">
           
           {/* Main Contact Trigger Button */}
           <button 
@@ -106,7 +141,6 @@ export default function Hero() {
             </div>
             
             <div className="flex gap-2 w-full sm:w-auto">
-              {/* Copy Action */}
               <button
                 onClick={handleCopyEmail}
                 className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-3 py-2 text-xs font-semibold bg-white/5 hover:bg-white/10 border border-white/10 rounded-md transition-colors text-white"
@@ -125,7 +159,6 @@ export default function Hero() {
                 )}
               </button>
 
-              {/* Native Mail Client Action */}
               <a
                 href="mailto:msayeem223@gmail.com?subject=Opportunity%20Inquiry"
                 className="flex-1 sm:flex-none flex items-center justify-center gap-1 px-3 py-2 text-xs font-semibold bg-primary text-white rounded-md hover:opacity-90 transition-opacity text-center"
