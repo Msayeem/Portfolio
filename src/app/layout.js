@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import PageTransition from "@/components/PageTransition";
+import ClientLayout from "@/components/ClientLayout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,11 +21,13 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
        <SmoothScroll>
-         <PageTransition>
-          {children}
-         </PageTransition>
+         <ClientLayout>
+           <PageTransition>
+            {children}
+           </PageTransition>
+         </ClientLayout>
        </SmoothScroll>
-        </body>
+      </body>
     </html>
   );
 }
