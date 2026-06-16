@@ -217,7 +217,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-32 max-w-[1300px] mx-auto px-gutter relative" id="projects">
+    <section className="py-32 max-w-[1300px] mx-auto px-gutter relative overflow-hidden" id="projects">
       {/* Background ambient gradient glow */}
       <div className="absolute w-[400px] h-[400px] rounded-full glow-orb-cyan top-1/2 right-[-150px] pointer-events-none z-0" />
 

@@ -135,20 +135,20 @@ export default function Skills() {
 
   const frontendSkills = [
     { name: "HTML5", level: "Expert", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { name: "NextJS", level: "Expert", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+    { name: "NextJS", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
     { name: "Tailwind Css", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-    { name: "JavaScript", level: "Expert", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "ReactJS", level: "Expert", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "JavaScript", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "ReactJS", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
   ];
 
   const backendSkills = [
-    { name: "NodeJS", level: "Expert", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "ExpressJS", level: "Expert", iconUrl: "https://www.peanutsquare.com/wp-content/uploads/2024/04/Express.png" },
-    { name: "MongoDB", level: "Expert", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+    { name: "NodeJS", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+    { name: "ExpressJS", level: "Intermediate", iconUrl: "https://www.peanutsquare.com/wp-content/uploads/2024/04/Express.png" },
+    { name: "MongoDB", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   ];
 
   return (
-    <section className="py-32 max-w-[1300px] mx-auto px-gutter relative" id="skills">
+    <section className="py-32 max-w-[1300px] mx-auto px-gutter relative overflow-hidden" id="skills">
       {/* Background ambient light */}
       <div className="absolute w-[300px] h-[300px] rounded-full glow-orb-emerald bottom-0 left-[-50px] pointer-events-none z-0" />
 

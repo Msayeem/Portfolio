@@ -50,9 +50,9 @@ export default function About() {
   }, { scope: containerRef });
 
   return (
-    <main 
+    <div 
       ref={containerRef}
-      className="bg-black text-gray-300 relative overflow-hidden"
+      className="bg-black text-gray-300 relative overflow-x-hidden"
     >
       {/* Background ambient particle anchors */}
       <div className="absolute top-[15%] right-[5%] w-2 h-2 rounded-full bg-primary/20 animate-pulse pointer-events-none z-0" />
@@ -76,58 +76,54 @@ export default function About() {
         <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
           
           {/* Bio Text */}
-          <div className="flex-1 space-y-8 text-base sm:text-lg leading-relaxed text-gray-400">
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            >
-              I&apos;m Muhammed Sayem. A{" "}
-              <span className="text-white font-bold underline decoration-primary decoration-2 underline-offset-4">Web Developer</span>{" "}
-              With A Passion For{" "}
-              <span className="text-white font-bold underline decoration-secondary decoration-2 underline-offset-4">
-                Transforming Ideas, Interactive Web Experiences.
-              </span>{" "}
-              While Early In My Career, I Bring Fresh Perspectives And A Dedication
-              To Creating Intuitive, Polished{" "}
-              <span className="text-white font-bold">
-                Applications That Truly Connect With Users.
-              </span>{" "}
-              Every Line Of Code Is A Step Toward Mastering My Craft, and I&apos;m
-              Excited To Deliver Projects That Are Both Beautiful And Functional.
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            >
-              Beyond My{" "}
-              <span className="text-white font-bold">Front-End Focus</span>
-              , I Also Draw On{" "}
-              <span className="text-white font-bold underline decoration-primary decoration-2 underline-offset-4">
-                Experience With Back-End And Full-Stack Projects
-              </span>
-              , Allowing Me To Approach Challenges From Different Angles And
-              Provide Well-Rounded Solutions. My Goal Is Not Just To Meet
-              Expectations But To Exceed Them,{" "}
-              <span className="text-white font-bold">
-                Delivering High-Quality, Impactful Work That Clients Can Rely On.
-              </span>
-            </motion.p>
+       <div className="flex-1 space-y-8 text-base sm:text-lg leading-relaxed text-gray-400">
+  <motion.p
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+  >
+    I&apos;m Muhammed Sayem, a{" "}
+    <span className="text-white font-bold underline decoration-primary decoration-2 underline-offset-4">Full-Stack Web Developer</span>{" "}
+    driven by a passion for{" "}
+    <span className="text-white font-bold underline decoration-secondary decoration-2 underline-offset-4">
+      transforming complex ideas into interactive web experiences.
+    </span>{" "}
+    While early in my career, I bring a fresh perspective, a dedicated work ethic, and a commitment to building{" "}
+    <span className="text-white font-bold">
+      clean, highly polished applications that connect deeply with users.
+    </span>{" "}
+    Every project is an opportunity to refine my craft, push structural boundaries, and deliver engineering that is both beautiful and functional.
+  </motion.p>
+  
+  <motion.p
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+  >
+    My technical approach bridges both{" "}
+    <span className="text-white font-bold">frontend user interfaces</span>{" "}
+    and{" "}
+    <span className="text-white font-bold underline decoration-primary decoration-2 underline-offset-4">
+      robust backend architecture
+    </span>
+    , ensuring that every layer of an application is seamless, secure, and optimized. By treating full-stack integration as a unified discipline, I approach engineering challenges from a comprehensive angle—focusing not just on meeting requirements, but on{" "}
+    <span className="text-white font-bold">
+      delivering scalable, production-ready code that teams and clients can rely on.
+    </span>
+  </motion.p>
 
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-white font-black text-xl tracking-tight"
-            >
-              Let&apos;s Build Something Unforgettable! 🚀
-            </motion.p>
-          </div>
+  <motion.p 
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+    className="text-white font-black text-xl tracking-tight"
+  >
+    Let&apos;s build something unforgettable! 🚀
+  </motion.p>
+</div>
 
           {/* Profile Image Wrapper */}
           <div ref={profileParallaxRef} className="flex-shrink-0 relative transform-gpu select-none">
@@ -227,6 +223,6 @@ export default function About() {
 
         </div>
       </section>
-    </main>
+    </div>
   );
 }
