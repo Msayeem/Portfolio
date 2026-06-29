@@ -160,6 +160,21 @@ export default function Projects() {
   const headerRef = useScrollReveal({ y: 30, opacity: 0 });
 
   const projects = [
+       {
+      title: "Startup-Forge",
+      description:
+        "Startup-Forge is a role-based startup team building platform where founders can transform ideas into reality by connecting with talented collaborators. The platform bridges the gap between startup founders and professionals looking to join exciting startup ventures.",
+      image: "/startupForge.png",
+      tags: [
+        { label: "Next.js", bg: "bg-emerald-500/5", text: "text-emerald-400", border: "border-emerald-500/10", dot: "bg-emerald-400" },
+        { label: "Node.js", bg: "bg-green-500/5", text: "text-green-400", border: "border-green-500/10", dot: "bg-green-400" },
+        { label: "Express.js", bg: "bg-neutral-500/5", text: "text-neutral-300", border: "border-neutral-500/10", dot: "bg-neutral-400" },
+        { label: "MongoDB", bg: "bg-green-600/5", text: "text-green-500", border: "border-green-600/10", dot: "bg-green-500" },
+        { label: "Tailwind CSS", bg: "bg-sky-500/5", text: "text-sky-400", border: "border-sky-500/10", dot: "bg-sky-400" },
+      ],
+      github: "https://github.com/Msayeem/Startup-Forge",
+      link: "https://startup-forge-gules.vercel.app"
+    },
     {
       title: "Sport-Nest",
       description:
@@ -167,7 +182,6 @@ export default function Projects() {
       image: "/sportnest.png",
       tags: [
         { label: "Next.js", bg: "bg-emerald-500/5", text: "text-emerald-400", border: "border-emerald-500/10", dot: "bg-emerald-400" },
-        { label: "React", bg: "bg-cyan-500/5", text: "text-cyan-400", border: "border-cyan-500/10", dot: "bg-cyan-400" },
         { label: "Node.js", bg: "bg-green-500/5", text: "text-green-400", border: "border-green-500/10", dot: "bg-green-400" },
         { label: "Express.js", bg: "bg-neutral-500/5", text: "text-neutral-300", border: "border-neutral-500/10", dot: "bg-neutral-400" },
         { label: "MongoDB", bg: "bg-green-600/5", text: "text-green-500", border: "border-green-600/10", dot: "bg-green-500" },

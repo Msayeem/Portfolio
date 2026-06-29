@@ -117,7 +117,7 @@ function SkillCard({ num, title, skills, index }) {
               </div>
               <div>
                 <p className="text-[14px] sm:text-base font-bold text-white transition-colors duration-300 group-hover:text-primary">{skill.name}</p>
-                <p className="font-mono text-[10px] text-on-surface-variant uppercase tracking-wider">
+                <p className=" text-[11px] text-on-surface-variant uppercase tracking-wider">
                   {skill.level}
                 </p>
               </div>
