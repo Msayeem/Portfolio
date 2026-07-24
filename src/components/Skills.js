@@ -138,12 +138,13 @@ export default function Skills() {
     { name: "NextJS", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
     { name: "Tailwind Css", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     { name: "JavaScript", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "TypeScript", level: "Beginner", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
     { name: "ReactJS", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
   ];
 
   const backendSkills = [
     { name: "NodeJS", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "ExpressJS", level: "Intermediate", iconUrl: "https://www.peanutsquare.com/wp-content/uploads/2024/04/Express.png" },
+    { name: "ExpressJS", level: "Intermediate", iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBePV-8C5Wxo2K2wP1hETXtiQ-oLW_rFRNzMsFFuTbA&s=10" },
     { name: "MongoDB", level: "Intermediate", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   ];
 

@@ -163,7 +163,7 @@ export default function Projects() {
        {
       title: "Startup-Forge",
       description:
-        "Startup-Forge is a role-based startup team building platform where founders can transform ideas into reality by connecting with talented collaborators. The platform bridges the gap between startup founders and professionals looking to join exciting startup ventures.",
+        "Startup-Forge is a role-based team-building platform connecting startup founders with talented collaborators to turn ideas into reality.",
       image: "/startupForge.png",
       tags: [
         { label: "Next.js", bg: "bg-emerald-500/5", text: "text-emerald-400", border: "border-emerald-500/10", dot: "bg-emerald-400" },
@@ -191,43 +191,73 @@ export default function Projects() {
       link: "https://sport-nest-blue.vercel.app"
     },
     {
-      title: "Mango Books",
+      title: "Dish-Dash",
       description:
-        "A modern book borrowing platform with smart discovery and secure authentication.",
-      image: "/mango.png",
+        "Dish-Dash is a modern full-stack recipe-sharing platform to discover, save, and share recipes. It includes an AI assistant powered by the Gemini API to help users navigate the app and answer questions.",
+      image: "/dishdash.png",
       tags: [
         { label: "Next.js", bg: "bg-emerald-500/5", text: "text-emerald-400", border: "border-emerald-500/10", dot: "bg-emerald-400" },
-        { label: "React", bg: "bg-cyan-500/5", text: "text-cyan-400", border: "border-cyan-500/10", dot: "bg-cyan-400" },
+        { label: "Node.js", bg: "bg-green-500/5", text: "text-green-400", border: "border-green-500/10", dot: "bg-green-400" },
+        { label: "Express.js", bg: "bg-neutral-500/5", text: "text-neutral-300", border: "border-neutral-500/10", dot: "bg-neutral-400" },
+        { label: "MongoDB", bg: "bg-green-600/5", text: "text-green-500", border: "border-green-600/10", dot: "bg-green-500" },
         { label: "Tailwind CSS", bg: "bg-sky-500/5", text: "text-sky-400", border: "border-sky-500/10", dot: "bg-sky-400" },
       ],
-      github: "https://github.com/Msayeem/mango",
-      link: "https://mango-swart-five.vercel.app"
+      github: "https://github.com/Msayeem/Dish-Dash",
+      link: "https://dish-dash-mu.vercel.app"
     },
     {
-      title: "Keen-keeper",
+      title: "Cart-Flow",
       description:
-        "A personal connection tracker for staying in touch with the people that matter.",
-      image: "/keenkeeper.png",
+        "Cart-Flow is a modern full-stack marketplace built with Next.js and TypeScript, allowing users to discover products and sellers to manage their listings through a clean, responsive UI.",
+      image: "/cartFlow.png",
       tags: [
         { label: "Next.js", bg: "bg-emerald-500/5", text: "text-emerald-400", border: "border-emerald-500/10", dot: "bg-emerald-400" },
-        { label: "React", bg: "bg-cyan-500/5", text: "text-cyan-400", border: "border-cyan-500/10", dot: "bg-cyan-400" },
+        { label: "Node.js", bg: "bg-green-500/5", text: "text-green-400", border: "border-green-500/10", dot: "bg-green-400" },
+        { label: "Express.js", bg: "bg-neutral-500/5", text: "text-neutral-300", border: "border-neutral-500/10", dot: "bg-neutral-400" },
+        { label: "MongoDB", bg: "bg-green-600/5", text: "text-green-500", border: "border-green-600/10", dot: "bg-green-500" },
         { label: "Tailwind CSS", bg: "bg-sky-500/5", text: "text-sky-400", border: "border-sky-500/10", dot: "bg-sky-400" },
       ],
-      github: "https://github.com/Msayeem/Keen-keeper",
-      link: "https://msayeem.github.io/Keen-keeper"
+      github: "https://github.com/Msayeem/Cart-Flow",
+      link: "https://cart-flow-henna.vercel.app/"
     },
-    {
-      title: "Digi-Tools",
-      description:
-        "A sleek marketplace connecting users with digital professionals.",
-      image: "/digitools.png",
-      tags: [
-        { label: "React", bg: "bg-cyan-500/5", text: "text-cyan-400", border: "border-cyan-500/10", dot: "bg-cyan-400" },
-        { label: "Tailwind CSS", bg: "bg-sky-500/5", text: "text-sky-400", border: "border-sky-500/10", dot: "bg-sky-400" },
-      ],
-      github: "https://github.com/Msayeem/Digi-Tools",
-      link: "https://msayeem.github.io/Digi-Tools"
-    },
+    // {
+    //   title: "Mango Books",
+    //   description:
+    //     "A modern book borrowing platform with smart discovery and secure authentication.",
+    //   image: "/mango.png",
+    //   tags: [
+    //     { label: "Next.js", bg: "bg-emerald-500/5", text: "text-emerald-400", border: "border-emerald-500/10", dot: "bg-emerald-400" },
+    //     { label: "React", bg: "bg-cyan-500/5", text: "text-cyan-400", border: "border-cyan-500/10", dot: "bg-cyan-400" },
+    //     { label: "Tailwind CSS", bg: "bg-sky-500/5", text: "text-sky-400", border: "border-sky-500/10", dot: "bg-sky-400" },
+    //   ],
+    //   github: "https://github.com/Msayeem/mango",
+    //   link: "https://mango-swart-five.vercel.app"
+    // },
+    // {
+    //   title: "Keen-keeper",
+    //   description:
+    //     "A personal connection tracker for staying in touch with the people that matter.",
+    //   image: "/keenkeeper.png",
+    //   tags: [
+    //     { label: "Next.js", bg: "bg-emerald-500/5", text: "text-emerald-400", border: "border-emerald-500/10", dot: "bg-emerald-400" },
+    //     { label: "React", bg: "bg-cyan-500/5", text: "text-cyan-400", border: "border-cyan-500/10", dot: "bg-cyan-400" },
+    //     { label: "Tailwind CSS", bg: "bg-sky-500/5", text: "text-sky-400", border: "border-sky-500/10", dot: "bg-sky-400" },
+    //   ],
+    //   github: "https://github.com/Msayeem/Keen-keeper",
+    //   link: "https://msayeem.github.io/Keen-keeper"
+    // },
+    // {
+    //   title: "Digi-Tools",
+    //   description:
+    //     "A sleek marketplace connecting users with digital professionals.",
+    //   image: "/digitools.png",
+    //   tags: [
+    //     { label: "React", bg: "bg-cyan-500/5", text: "text-cyan-400", border: "border-cyan-500/10", dot: "bg-cyan-400" },
+    //     { label: "Tailwind CSS", bg: "bg-sky-500/5", text: "text-sky-400", border: "border-sky-500/10", dot: "bg-sky-400" },
+    //   ],
+    //   github: "https://github.com/Msayeem/Digi-Tools",
+    //   link: "https://msayeem.github.io/Digi-Tools"
+    // },
   ];
 
   return (

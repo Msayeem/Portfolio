@@ -209,6 +209,14 @@ export default function Hero() {
             </span>
           </div>
 
+          {/* Designation / Role Title */}
+          <div className="animate-actions opacity-0 flex items-center gap-3 mb-4">
+            <span className="h-[1px] w-8 bg-gradient-to-r from-primary to-secondary hidden sm:block" />
+            <span className="text-sm sm:text-base font-mono font-bold tracking-[0.15em] uppercase text-gradient-cyan-emerald">
+              Full Stack Developer
+            </span>
+          </div>
+
           {/* Headline Text */}
           <h1 className="text-4xl sm:text-5xl lg:text-headline-xl font-headline-xl leading-tight mb-6 select-text tracking-tight font-black">
             {headlineWords.map((word, idx) => (
