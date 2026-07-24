@@ -95,30 +95,46 @@ export default function About() {
     </span>{" "}
     Every project is an opportunity to refine my craft, push structural boundaries, and deliver engineering that is both beautiful and functional.
   </motion.p>
-  
+
   <motion.p
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
     transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
   >
-    My technical approach bridges both{" "}
-    <span className="text-white font-bold">frontend user interfaces</span>{" "}
-    and{" "}
+    My journey started as a{" "}
     <span className="text-white font-bold underline decoration-primary decoration-2 underline-offset-4">
-      robust backend architecture
-    </span>
-    , ensuring that every layer of an application is seamless, secure, and optimized. By treating full-stack integration as a unified discipline, I approach engineering challenges from a comprehensive angle—focusing not just on meeting requirements, but on{" "}
+      self-taught developer
+    </span>{" "}
+    while completing my HSC — teaching myself JavaScript, React, and Node.js one project at a time, then leveling up into full-stack territory with MongoDB, Express, and authentication systems. What started as curiosity turned into building{" "}
     <span className="text-white font-bold">
-      delivering scalable, production-ready code that teams and clients can rely on.
+      real, deployed products
     </span>
+    : role-based platforms with billing and dashboards, e-commerce apps with cart logic and serverless deployments, and booking systems from the ground up. I enjoy the{" "}
+    <span className="text-white font-bold underline decoration-secondary decoration-2 underline-offset-4">
+      full-stack puzzle
+    </span>{" "}
+    the most — wiring a clean UI to a backend that actually holds up, then obsessing over the small details that make an app feel polished.
+  </motion.p>
+
+  <motion.p
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+  >
+    Outside of code, you&apos;ll usually find me{" "}
+    <span className="text-white font-bold">
+      gaming
+    </span>{" "}
+    — it&apos;s where a lot of my problem-solving instincts and patience for debugging tricky systems actually come from. I bring that same mix of curiosity and persistence to every project: ship something that works first, then keep refining until it feels right.
   </motion.p>
 
   <motion.p 
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+    transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
     className="text-white font-black text-xl tracking-tight"
   >
     Let&apos;s build something unforgettable! 🚀

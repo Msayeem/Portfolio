@@ -35,7 +35,7 @@ export default function Technologies() {
     },
     {
       name: "Express",
-      icon: "https://www.peanutsquare.com/wp-content/uploads/2024/04/Express.png",
+      icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBePV-8C5Wxo2K2wP1hETXtiQ-oLW_rFRNzMsFFuTbA&s=10",
       invert: true,
     },
     {
