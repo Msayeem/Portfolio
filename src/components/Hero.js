@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { IoMailOutline, IoCopyOutline, IoCheckmarkCircleOutline } from "react-icons/io5";
+import { IoMailOutline, IoCopyOutline, IoCheckmarkCircleOutline, IoDocumentTextOutline } from "react-icons/io5";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import useCursorFollower from "../../hooks/useCursorFollower";
@@ -245,6 +245,21 @@ export default function Hero() {
                 <IoMailOutline className="text-lg" />
                 Contact me
               </button>
+            </Magnetic>
+
+            {/* Magnetic Resume Button */}
+            <Magnetic strength={0.2}>
+              <a
+                href="https://drive.google.com/uc?export=download&id=13AlZGiG2AZeDG0GGcoDYEdiOqlYuhNRs"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={setPointer}
+                onMouseLeave={setDefault}
+                className="w-full sm:w-auto bg-white/[0.03] hover:bg-white/[0.08] hover:border-primary/25 border border-white/5 text-white px-8 py-3.5 rounded-lg font-bold flex items-center justify-center gap-2.5 transition-all duration-500 cursor-pointer shadow-md active:scale-95 text-sm"
+              >
+                <IoDocumentTextOutline className="text-lg text-secondary" />
+                Download Resume
+              </a>
             </Magnetic>
 
             {/* Social Media Anchors */}
